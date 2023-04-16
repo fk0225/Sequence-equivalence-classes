@@ -9,7 +9,6 @@ int main() {
     seq_set_name(p,"012","seq0");
     seq_set_name(p,"0122","seq1");
     printf("%d\n",seq_valid(p, "01222"));
-    printf("%d")
     //p->classNames->currCapacity;
     //printf("Size=%d\n",);
     //printf("%d\n",seq_equiv(p,"012","0122"));
