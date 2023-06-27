@@ -7,35 +7,35 @@
 typedef struct UFNode UFNode;
 
 /**
- * @param name
- * @return
+ * @param name: the name of the class stored by the ne node (in particular can be just NULL).
+ * @return the newly allocated record.
  */
-UFNode * newUFNode(char* name);
+UFNode *newUFNode(char *name);
 
 /**
  * @param node: UFNode record scheduled for deletion.
  */
-void safeDeleteUFNode(UFNode* node);
+void safeDeleteUFNode(UFNode *node);
 
 
 /**
  * @param node: UFNode record whose source trieNode record corresponds to a sequence scheduled for deletion.
  */
-void setSequenceDeleted(UFNode* node);
+void setSequenceDeleted(UFNode *node);
 
 
 /**
  * @param node: node whose representative's class name is being extracted.
  * @return the representative's class name.
  */
-char const* getRepresentativeClassName(UFNode* node);
+char const *getRepresentativeClassName(UFNode *node);
 
 /**
  * @param node: a node of the UFNode record, whose representative will be modified.
  * @param n: new name of the representative of node.
  * @return exit code according to the specification of the task.
  */
-int setRepresentativeClassName(UFNode* node, char const* n);
+int setRepresentativeClassName(UFNode *node, char const *n);
 
 /**
  * @param node: a node of the UFNode record, whose representative will be found.
@@ -50,9 +50,5 @@ UFNode *find(UFNode *node);
  * @return exit code according to the specification of the task.
  */
 int unionBySize(UFNode *a, UFNode *b);
-/*
-void printClassName(UFNode* node);
 
-void printNodeRank(UFNode* node);
-*/
 #endif

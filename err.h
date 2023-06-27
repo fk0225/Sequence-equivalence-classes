@@ -26,6 +26,6 @@ int stringNotNullOrEmpty(char const* s);
  * @param s: the string being tested.
  * @return 1 if the string is a valid sequence over the alphabet {0,1,2}, 0 otherwise.
  */
-int stringAllowedAs012Seq(char const* s, int n);
+int stringAllowedAs012Seq(char const* s, long long unsigned n);
 
 #endif
