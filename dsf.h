@@ -7,7 +7,7 @@
 typedef struct UFNode UFNode;
 
 /**
- * @param name: the name of the class stored by the ne node (in particular can be just NULL).
+ * @param name: the name of the class stored by the new node (potentially NULL).
  * @return the newly allocated record.
  */
 UFNode *newUFNode(char *name);

@@ -1,7 +1,6 @@
 
 /**
- * Implementation of the trieNode record (or in accordance with OOP terminology: class) with its utility functions (or,
- * in terms of OOP, class methods), implementing the functionalities of the Trie data structure.
+ * Implementation of the trieNode record, implementing the functionalities of the Trie data structure.
  */
 
 #include <stdlib.h>
@@ -56,7 +55,7 @@ void deleteTrie(node *root) {
 }
 
 /**
- * Function (or in terms of OOP: getter method) that extracts the class name from the Union Find node responsible for
+ * Function that extracts the class name from the Union Find node responsible for
  * storing information about it, by calling its own appropriate getter "method".
  */
 char const *getClassName(node *t) {
@@ -64,7 +63,7 @@ char const *getClassName(node *t) {
 }
 
 /**
- * Function (or in terms of OOP: setter method) that sets the class name from the Union Find node responsible for
+ * Function that sets the class name from the Union Find node responsible for
  * storing information about it, by calling its own appropriate setter "method".
  */
 
@@ -152,8 +151,8 @@ int searchSequence(node *root, char const *s, long long unsigned sLen) {
 }
 
 /**
- * Function (or "method") of the trie "class" responsible for performing equivalence, that calls the unionByRank
- * function ("method") of the UFNode "class".
+ * Function of responsible for performing equivalence class joining on trie records by calling the unionBySize
+ * function (declared in dsf.h and implemented in dsf.c) on the record's classNameNode field.
  */
 int mergeClasses(node *node1, node *node2) {
     if (node1 == NULL || node2 == NULL) return 0;

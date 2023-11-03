@@ -14,7 +14,7 @@ typedef struct seq {
 
 
 /**
- * Implementation of the seq_new function/method, according to the specification of the task.
+ * Implementation of the seq_new operation, according to the specification of the task.
  */
 seq_t *seq_new(void) {
     seq_t *newSeq = (seq_t *) malloc(sizeof(seq_t));
@@ -32,7 +32,7 @@ seq_t *seq_new(void) {
 }
 
 /**
- * Implementation of the seq_delete function/method, according to the specification of the task.
+ * Implementation of the seq_delete operation, according to the specification of the task.
  */
 void seq_delete(seq_t *p) {
     if (p == NULL) return;
@@ -42,7 +42,7 @@ void seq_delete(seq_t *p) {
 }
 
 /**
- * Implementation of the seq_add function/method, according to the specification of the task.
+ * Implementation of the seq_add operation, according to the specification of the task.
  */
 int seq_add(seq_t *p, char const *s) {
     if (!(p != NULL && stringNotNullOrEmpty(s))) return invalidArg();
@@ -52,7 +52,7 @@ int seq_add(seq_t *p, char const *s) {
 }
 
 /**
- * Implementation of the seq_remove function/method, according to the specification of the task.
+ * Implementation of the seq_remove operation, according to the specification of the task.
  */
 int seq_remove(seq_t *p, char const *s) {
     if (!(p != NULL && stringNotNullOrEmpty(s))) return invalidArg();
@@ -63,7 +63,7 @@ int seq_remove(seq_t *p, char const *s) {
 }
 
 /**
- * Implementation of the seq_valid function/method, according to the specification of the task.
+ * Implementation of the seq_valid operation, according to the specification of the task.
  */
 int seq_valid(seq_t *p, char const *s) {
     if (!(p != NULL && stringNotNullOrEmpty(s))) return invalidArg();
@@ -73,7 +73,7 @@ int seq_valid(seq_t *p, char const *s) {
 }
 
 /**
- * Implementation of the seq_set_name function/method, according to the specification of the task.
+ * Implementation of the seq_set_name operation, according to the specification of the task.
  */
 int seq_set_name(seq_t *p, char const *s, char const *n) {
     if (!(p != NULL && stringNotNullOrEmpty(s) && stringNotNullOrEmpty(n))) return invalidArg();
@@ -85,7 +85,7 @@ int seq_set_name(seq_t *p, char const *s, char const *n) {
 }
 
 /**
- * Implementation of the seq_get_name function/method, according to the specification of the task.
+ * Implementation of the seq_get_name operation, according to the specification of the task.
  */
 char const *seq_get_name(seq_t *p, char const *s) {
     if (!(p != NULL && stringNotNullOrEmpty(s))) {
@@ -103,7 +103,7 @@ char const *seq_get_name(seq_t *p, char const *s) {
 }
 
 /**
- * Implementation of the seq_equiv function/method, according to the specification of the task.
+ * Implementation of the seq_equiv operation, according to the specification of the task.
  */
 int seq_equiv(seq_t *p, char const *s1, char const *s2) {
     if (!(p != NULL && stringNotNullOrEmpty(s1) && stringNotNullOrEmpty(s2))) return invalidArg();

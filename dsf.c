@@ -75,7 +75,7 @@ void safeDeleteUFNode(UFNode *node) {
 }
 
 /**
- * Function (or in terms of OOP: getter method) that extracts the class name from the node.
+ * Function responsible for extracting the class name from the node.
  * As specified in the task description, in case of the class name not being set, returns null failure.
  */
 char const *getRepresentativeClassName(UFNode *node) {
@@ -85,7 +85,7 @@ char const *getRepresentativeClassName(UFNode *node) {
 }
 
 /**
- * Function (or in terms of OOP: setter method) that sets the name stored at the UFNode to the provided name n.
+ * Utility function responsible for setting the name stored at the UFNode to the provided name n.
  */
 int setRepresentativeClassName(UFNode *node, char const *n) {
     long long unsigned nLen = strlen(n), classNameLen = 0;
@@ -103,7 +103,7 @@ int setRepresentativeClassName(UFNode *node, char const *n) {
 }
 
 /**
- * Function (or in terms of OOP: setter method) that sets the sequenceDeleted field of the UFNode to 1, hence marking
+ * Utility procedure responsible for setting the sequenceDeleted field of the UFNode to 1, hence marking
  * that is not pointed to by any trie node.
  */
 
@@ -112,7 +112,7 @@ void setSequenceDeleted(UFNode *node) {
 }
 
 /**
- * Function implementing the find operation of the Disjoint Set Family Data structure.
+ * Function responsible for implementing the find operation of the Disjoint Set Family Data structure.
  */
 
 UFNode *find(UFNode *node) {
@@ -121,7 +121,7 @@ UFNode *find(UFNode *node) {
 }
 
 /**
- * Function that implements the rules of giving new abstraction classes names, according to the rules outlined in the
+ * Function responsible for implementing the rules of giving new abstraction classes names, according to the rules outlined in the
  * task description.
  */
 
